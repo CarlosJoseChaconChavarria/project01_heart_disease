@@ -1,0 +1,40 @@
+🏥 Heart Failure Prediction System
+This project is an MLOps-ready web application that predicts the risk of heart failure based on clinical patient data. It uses a Random Forest Classifier to analyze patterns and a StandardScaler to ensure data consistency.
+
+🚀 Project Overview
+Goal: Predict the DEATH_EVENT (High Risk vs. Low Risk) based on 12 clinical features.
+
+Model: Random Forest with 100 estimators and balanced class weights to handle data imbalance.
+
+Deployment: Built with Streamlit for real-time interaction.
+
+📂 Repository Structure
+app.py: The Streamlit web application code.
+
+code.ipynb: The Jupyter Notebook containing the data analysis and training logic.
+
+heart_disease_model.pkl: The trained Random Forest "Chef".
+
+scaler.pkl: The StandardScaler "Translator" used for preprocessing.
+
+requirements.txt: List of dependencies required for deployment.
+
+🛠️ Installation & Local Usage
+Clone the repository:
+
+Bash
+git clone https://github.com/YOUR_USERNAME/project01_heart_disease.git
+Install dependencies:
+
+Bash
+pip install -r requirements.txt
+Run the application:
+
+Bash
+streamlit run app.py
+🧠 MLOps Concepts Implemented
+Artifact Versioning: Saving the model and scaler as inseparable pairs to ensure production matches training.
+
+Feature Scaling: Implementing standardization to prevent high-magnitude features like platelets from overpowering features like age.
+
+Reproducibility: Using random_state=42 across all data splits and model training.
